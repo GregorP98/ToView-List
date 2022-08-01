@@ -1,0 +1,22 @@
+const express = require("express");
+const cors = require("cors");
+const router = require("./router.js");
+const { connectToDB } = require("./models/index.js");
+const port = 3001;
+
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+app.use(router);
+
+(async () => {
+  try {
+    connectToDB();
+    app.listen(port, () => {
+      console.log(`Express listening on ${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+})();

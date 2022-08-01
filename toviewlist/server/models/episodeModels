@@ -1,0 +1,22 @@
+const { mongoose } = require("./index.js");
+
+const episodeSchema = new mongoose.Schema({
+  seriesName: String,
+  episodeTitle: String,
+  date: String,
+  network: String,
+});
+
+const Episode = mongoose.model("Episode", episodeSchema);
+
+const getEpisode = async function () {
+  const episode = await Episode.find({});
+  return episode;
+};
+
+const setEpisode = async function (episode) {
+  const topic = await Episode.create(episode);
+  return topic;
+};
+
+module.exports = { getEpisode, setEpisode };
