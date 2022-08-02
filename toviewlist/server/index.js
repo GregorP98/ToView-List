@@ -1,9 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-const router = require("./router.js");
-const { connectToDB } = require("./models/index.js");
-const port = 3001;
-
+const port = process.env.PORT || 3001;
+const router = require("./router");
+const { connectToDB } = require("./models/index");
 const app = express();
 
 app.use(express.json());

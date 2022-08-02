@@ -1,7 +1,0 @@
-const router = require("express").Router();
-const episodeController = require("./Controllers/episodeController.js");
-
-router.get("/events", episodeController.getEvents);
-router.post("/events", episodeController.setEvent);
-
-module.exports = router;

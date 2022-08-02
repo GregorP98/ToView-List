@@ -10,13 +10,13 @@ const episodeSchema = new mongoose.Schema({
 const Episode = mongoose.model("Episode", episodeSchema);
 
 const getEpisode = async function () {
-  const episode = await Episode.find({});
-  return episode;
+  const episodes = await Episode.find({});
+  return episodes;
 };
 
 const setEpisode = async function (episode) {
-  const topic = await Episode.create(episode);
-  return topic;
+  const newEpisode = await Episode.create(episode);
+  return newEpisode;
 };
 
 module.exports = { getEpisode, setEpisode };

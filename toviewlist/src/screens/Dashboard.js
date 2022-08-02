@@ -25,3 +25,9 @@ export default function Dashboard({ navigation }) {
     </Background>
   );
 }
+
+// const styles = StyleSheet.create({
+//   button: {
+//     alignItems: "flex-end",
+//   },
+// });
