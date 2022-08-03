@@ -1,9 +1,10 @@
 const { mongoose } = require("./index.js");
 
 const episodeSchema = new mongoose.Schema({
+  id: String,
   seriesName: String,
   episodeTitle: String,
-  date: String,
+  released: String,
   network: String,
 });
 

@@ -10,6 +10,7 @@ import BackButton from "../components/BackButton";
 import { theme } from "../core/theme";
 import { emailValidator } from "../helpers/emailValidator";
 import { passwordValidator } from "../helpers/passwordValidator";
+// import mockData from "../assets/mockData.json";
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: "", error: "" });
@@ -28,7 +29,7 @@ export default function LoginScreen({ navigation }) {
       routes: [{ name: "Dashboard" }],
     });
   };
-
+  // console.warn(mockData);
   return (
     <Background>
       <BackButton goBack={navigation.goBack} />

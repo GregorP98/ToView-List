@@ -10,6 +10,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 21,
     textAlign: "left",
-    marginBottom: 12,
+    marginBottom: 8,
   },
 });
